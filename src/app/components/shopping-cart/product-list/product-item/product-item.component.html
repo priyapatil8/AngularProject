@@ -1,0 +1,18 @@
+<div class="card mb-4 box-shadow">
+    <img class="card-img-top img-responsive" width="100%" [src]="productItem.image"/>
+    <div class="card-body">
+    <p class="card-text">
+      <a routerLink="view-product/{{productItem.productId}}">{{productItem.productName}}</a><br>
+      <strong>{{productItem.productPrice|currency:'USD'}}</strong>
+    </p>
+      <p class="card-text">{{productItem.description }}</p>
+      
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-primary product-btn" (click)="handleAddToCart()">Add to Cart</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary product-btn">Delete product</button>
+        </div>
+        
+      </div>
+    </div>
+    </div>

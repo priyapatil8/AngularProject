@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary lighten-5 mb-4">
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+      class="navbar-toggler-icon"></span></button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <h1 class="navbar-brand my-0 mr-md-auto-font-weight-normal">RightCare</h1>
+    <!-- Links -->
+    <ul class="navbar-nav m-auto  ">
+
+      <li class="nav-item active ">
+
+        <a class="nav-link " href="#" [routerLink]="['/home']" routerLinkActive="active">Home<span
+            class="sr-only ">(current)</span></a>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">Category-List</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink"  >
+          <a class="dropdown-item"  [routerLink]="['/category/:id']"
+          *ngFor="let categ of categoryList" >{{categ.name}}</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Cart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/check-out']">Check out</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/login']">Sign In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/register']">Sign Up</a>
+      </li>
+
+    </ul>
+    <!-- Search form -->
+    <form class="form-inline">
+      <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      <button  class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
